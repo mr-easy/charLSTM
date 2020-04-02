@@ -2,13 +2,13 @@
 Motivation from Andrej Karparthy's blog [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/).
 Trained using pytorch. On 39 books of Mark Twain (from [fullbooks.com](http://www.fullbooks.com/)),
 
-To genereate text using the trained model:
+## To genereate text using the trained model:
 ```
 python generate --initial_letters "any inital text you want to give" --num_letters 200
 ```
 Where you can give inital letters and the number of letters you want to generate.
 
-To train your own model on your own data:
+## To train your own model on your own data:
 1. Set the model parameters in `model.py` file.
 2. Put your data in `data/` directory. You may need to change the data processing code.
 3. Train the model using:
