@@ -1,6 +1,6 @@
 # charLSTM
 Motivation from Andrej Karparthy's blog [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/).
-Trained using pytorch. On 39 books of Mark Twain (from [fullbooks.com](http://www.fullbooks.com/)).
+Trained using PyTorch. On 39 books of Mark Twain (from [fullbooks.com](http://www.fullbooks.com/)).
 
 ## Some generated text
 * [He said this in a very low tone.] When he was asleep and said that he had not been less delivered on a sharp hand and said, "What hotel you going to stay? We can't be so suddlest-and it can't take pass and confessed.
@@ -10,19 +10,19 @@ Trained using pytorch. On 39 books of Mark Twain (from [fullbooks.com](http://ww
 
 Don't try to make sense out of them.
 
-## To genereate text using the trained model
+## To generate text using the trained model
 ```
-python generate --initial_letters "any inital text you want to give" --num_letters 200
+python generate.py --initial_letters "any initial text you want to give" --num_letters 200
 ```
-Where you can give inital letters and the number of letters you want to generate.
+Where you can give initial letters and the number of letters you want to generate.
 
 ## To train your own model on your own data
 1. Set the model parameters in `model.py` file.
-2. Put your data in `data/` directory. You may need to change the data processing code.
+2. Put your data in the `data/` directory. You may need to change the data processing code.
 3. Train the model using:
 ```
 python train.py
 ```
-4. The model will be saved in the `model/` directory. OVERWRITING the already saved model, you can change the model sve path name ath the end of `train.py` file. Also need to change in `generate.py` file.
+4. The model will be saved in the `model/` directory. OVERWRITING the already saved model, you can change the model save path name at the end of `train.py` file. Also need to change in `generate.py` file.
 
-The text can have 96 different characters, which include english lowercase and uppercase letters, punctuations from `string.punctuations`, white space character(`' '`) and newline character(`'\n'`). You can change it in the `utils.py` file.
+The text can have 96 different characters, which include English lowercase and uppercase letters, punctuations from `string.punctuations`, white space character(`' '`) and newline character(`'\n'`). You can change it in the `utils.py` file.
